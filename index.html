@@ -35,8 +35,12 @@
             };
             var player = new Twitch.Player("twitch-embed", options);
             player.setvolume(0.5);
-            if player.getEnded(true)
-            player.setChannel(sarahjane);
+            function changechannel(chan) {
+                var player = embed.getPlayer();
+                if (player.getEnded()) {
+                    player.setChannel(sarahjane)
+                }
+            };
             </script>
         </section>
     </main>
