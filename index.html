@@ -28,13 +28,16 @@
             <div id="twitch-embed"></div>
             <script src="https://embed.twitch.tv/embed/v1.js"></script>
             <script type = text/javascript>
-            new Twitch.Embed("twitch-embed", {
-                width: 854,
+            var options = {
+                width: 860,
                 height: 480,
                 channel: "pawlexy",
-                parent: []
-            });
+            };
+            var player = new Twitch.Player("twitch-embed", options);
+            player.setvolume(0.5);
             </script>
+            <button type="button" onclick="setChennel=('sarahjane')">sarahjane</button>
+        </section>
     </main>
     <footer>
         <p>Built with HTML & CSS.</p>
