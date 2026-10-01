@@ -27,6 +27,9 @@
         <section>
             <div id="twitch-embed"></div>
             <script src="https://embed.twitch.tv/embed/v1.js"></script>
+
+            <button onclick="changeChannel('sarahjane');">sarahjane</button>
+
             <script type = text/javascript>
             var options = {
                 width: 860,
@@ -35,12 +38,17 @@
             };
             var embed = new Twitch.Player("twitch-embed", options);
             embed.setvolume(0.5);
-            function changechannel(chan) {
-                var player = embed.getPlayer();
-                if (player.getEnded()) {
-                    player.setChannel(sarahjane):void,
-                };
-            };
+           
+            changeChannel = (chan) => {
+                embed.setChannel(chan);
+            }
+
+            //function changechannel(chan) {
+            //    var player = embed.getPlayer();
+            //    if (player.getEnded()) {
+            //        alert 
+            //    }
+            //};
             </script>
         </section>
     </main>
