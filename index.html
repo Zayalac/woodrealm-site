@@ -36,11 +36,14 @@
                 height: 480,
                 channel: "pawlexy",
             };
-            var embed = new Twitch.Player("twitch-embed", options);
+             var embed = new Twitch.Player("twitch-embed", options);
             embed.setVolume(0.5);
-                
+            if (embed.getEnded) {
+                embed.setChannel(sarahjane)
+            }
+           
             changeChannel = (chan) => {
-                embed.setChannel(chan);
+               embed.setChannel(chan);
             }
 
             //function changechannel(chan) {
